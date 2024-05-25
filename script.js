@@ -187,7 +187,7 @@ Array(0)
 
 
 */
-const book2 = getBook(2);
+const book2 = getBook(3);
 const [primaryGerner , secondaryGerner] = book2.genres;
 console.log(primaryGerner , secondaryGerner);
 
@@ -212,3 +212,14 @@ const Boo3Pages = book3.pages;
 
 //This is known as ternary operator
 Boo3Pages > 1000 ? console.log("More Than 1000 Pages") :console.log( "Lesst than 1000 pages");
+
+//logical operators
+console.log(true && "Hello This is true");
+
+//or operator
+console.log(book2.translations.spanish);
+
+console.log(book2.translations.spanish || "DONT HAVE TRANSLATION");
+
+const translations = book2.translations.bengali || "DNOT HAVE TRANSLATION";
+translations 
