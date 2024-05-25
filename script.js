@@ -205,7 +205,7 @@ const updateBook = {
 console.log(updateBook);
 
 
-const book3 = getBook(3);
+const book3 = getBook(2);
 console.log(book3.pages);
 const Boo3Pages = book3.pages;
 
@@ -223,3 +223,12 @@ console.log(book2.translations.spanish || "DONT HAVE TRANSLATION");
 
 const translations = book2.translations.bengali || "DNOT HAVE TRANSLATION";
 translations 
+
+//optinal chaing
+function getReview(book){
+  const goodReview = book.reviews.goodreads?.reviewsCount;
+  const libryAnything = book.reviews.librarything?.reviewsCount  ??  0;
+  return goodReview + libryAnything ;
+}
+
+console.log(getReview(book2));

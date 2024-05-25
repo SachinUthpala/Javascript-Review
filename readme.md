@@ -44,3 +44,15 @@ console.log(updateBook);
 ======== Ternary Operator =========
 Boo3Pages > 1000 ? console.log("More Than 1000 Pages") :console.log( "Lesst than 1000 pages");
 ========== End ==============
+
+
+
+======== optional chaing =======
+//optinal chaing
+function getReview(book){
+  const goodReview = book.reviews.goodreads?.reviewsCount;
+  const libryAnything = book.reviews.librarything?.reviewsCount  ??  0;
+  return goodReview + libryAnything ;
+}
+
+console.log(getReview(book2));
